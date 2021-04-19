@@ -32,8 +32,8 @@ for datapoint in data:
     evidence.append(datapoint["summary"])
     labels.append(datapoint["overall"])
 
-print(evidence)
-print(labels)
+# print(evidence)
+# print(labels)
 
 model.run(evidence, labels)
 
