@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        .HeadingContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 0px;
+            margin-left: 0px;
+            text-align: center;
+            min-height: 50%;
+<!--            background-color: #7ab8f7;-->
+        }
+
+        .Heading{
+            width: 800px;
+            height: 0px;
+            font-size: 50px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            border: none;
+            color: rgb(112, 2, 2);
+        }
+
+        .SecondaryContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 0px;
+            margin-left: 0px;
+            text-align: center;
+            min-height: 100%;
+<!--            background-color: #9aaa6d;-->
+        }
+
+        .Secondary{
+            width: 800px;
+            height: 0px;
+            font-size: 30px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            border: none;
+            color: rgb(112, 112, 2);
+        }
+
+        .FormTextContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 0px;
+            margin-left: 0px;
+            text-align: center;
+            min-height: 100%;
+        }
+
+        .FormText{
+            width: 800px;
+            height: 0px;
+            font-size: 30px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            border: none;
+            color: #3586d8;
+        }
+
+        .FormButtonContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 0px;
+            margin-left: 0px;
+            text-align: center;
+            min-height: 100%;
+        }
+
+        body, html {
+            height:100%;
+            margin: 0px;
+            font-size:16px;
+            font-family:"Lato", sans-serif;
+            font-weight: 400;
+            line-height: 300%;
+            color:#666;
+            padding: 0px;
+        }
+
+        .stylebutton{
+            border-radius: 12px;
+        }
+
+    </style>
+</head>
+<body>
+
+    {% if message %}
+        <p>
+            <div class="HeadingContainer">
+                <div class="Heading">
+                    {{ message }}
+                </div>
+            </div>
+        </p>
+    {% endif %}
+
+    <div class="HeadingContainer">
+        <div class="Heading">
+          AI-Powered Review Classifier
+        </div>
+    </div>
+
+<!--    <div class="SecondaryContainer">-->
+<!--        <div class="Secondary">-->
+<!--          Unsure how many stars to give your review? Let our LSTM Recurrent Neural Network handle that for you.-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <form action="" method="post">
+        <p>
+            <div class="FormTextContainer">
+                <div class="FormText">
+                    <label for="review">Enter in your written review (No more than 50 words):</label>
+                    <input type="text" name="review">
+                </div>
+            </div>
+
+        </p>
+        <br>
+        <br>
+        <p>
+            <div class="FormButtonContainer">
+                <div class="stylebutton">
+                    <input type="submit">
+                </div>
+
+            </div>
+
+        </p>
+    </form>
+
+</body>
+</html>
